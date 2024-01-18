@@ -43,13 +43,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-            text = "Hello $name!",
-            modifier = modifier
-    )
-}
+
 
 @Composable
 fun Bmi() {
@@ -59,7 +53,7 @@ fun Bmi() {
     val weight = weightInput.toIntOrNull() ?: 0
     val bmi = if(weight > 0 && height > 0) weight / (height * height) else 0.0
 
-    Column() {
+    Column {
         Text(
             text = stringResource(R.string.hu_yiming),
             fontSize = 24.sp,
